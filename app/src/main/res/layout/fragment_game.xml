@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <ScrollView
-        android:layout_width="match_parent"
-        android:fillViewport="true"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:gravity="center"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="16dp"
             tools:context=".QuizQuestionsActivity">
 
             <TextView
 
-                android:layout_width="373dp"
-                android:layout_height="wrap_content"
+                android:layout_width="372dp"
+                android:layout_height="84dp"
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:text="Enviromental Accessability Audit Report"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="336dp"
+                android:layout_height="90dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/canada" />
 
             <TextView
                 android:id="@+id/tv_question"
@@ -37,14 +47,6 @@
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@mipmap/canada"/>
-
             <LinearLayout
                 android:id="@+id/ll_progressbar"
                 android:layout_width="match_parent"
@@ -53,15 +55,15 @@
                 android:orientation="horizontal">
 
                 <ProgressBar
+                    android:id="@+id/pb"
+                    style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/pb"
-                    android:max="10"
-                    android:progress="0"
-                    android:minHeight="50dp"
                     android:indeterminate="false"
-                    style="?android:attr/progressBarStyleHorizontal"/>
+                    android:max="15"
+                    android:minHeight="50dp"
+                    android:progress="0" />
 
 
                 <TextView
@@ -75,79 +77,72 @@
                     android:textSize="15sp" />
 
 
-
-
             </LinearLayout>
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:id="@+id/tv_optionOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="15dp"
+
                 android:text="Option 1"
-                android:padding="15dp"
-
-                android:textSize="17sp"
                 android:textColor="#7A8089"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:id="@+id/tv_optionTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="15dp"
+
                 android:text="Option 2"
-                android:padding="15dp"
-
-                android:textSize="17sp"
                 android:textColor="#7A8089"
-                android:textStyle="bold"
-                android:gravity="center"/>
-
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:id="@+id/tv_optionThree"
-                android:text="Option 3"
-                android:textSize="17sp"
-                android:padding="15dp"
-
-                android:textColor="#7A8089"
-                android:textStyle="bold"
-                android:gravity="center"/>
-
-
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:id="@+id/tv_optionFour"
-                android:text="Option 4"
-                android:textSize="17sp"
+                android:gravity="center"
                 android:padding="15dp"
+                android:text="Option 3"
+
+                android:textColor="#7A8089"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_optionFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Option 4"
 
                 android:textColor="#7A8089"
 
-                android:textStyle="bold"
-                android:gravity="center"/>
-
-
-
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
 
             <Button
+                android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:id="@+id/btnSubmit"
-                android:text="SUBMIT"/>
-
+                android:text="SUBMIT" />
 
 
         </LinearLayout>
